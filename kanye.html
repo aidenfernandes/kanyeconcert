@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Kanye West Live in Delhi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+  <header>
+    <div class="countdown-container">
+  <div id="countdown">Loading countdown...</div>
+</div>
+    <h1>KANYE WEST</h1>
+    <h2>LIVE IN DELHI • ONE NIGHT ONLY</h2>
+<a href="#tickets" class="cta-button">GET YOUR TICKETS NOW</a>
+
+<div class="secondary-buttons">
+  <a href="https://yeezy.com" target="_blank" class="secondary-button">👕 VISIT CLOTHING LINE</a>
+  <a href="https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x" target="_blank" class="secondary-button">🎧 CATCH UP WITH HIS MUSIC</a>
+</div>
+  </header>
+
+  <section>
+    <div class="details">
+      <h2>Witness Chicago's Best, In Delhi</h2>
+      <p>Experience an unforgettable night with global icon Kanye West performing his biggest hits live on stage.</p>
+      <p><strong>Date:</strong> 15 November 2026</p>
+      <p><strong>Venue:</strong> Jawaharlal Nehru Stadium, Delhi</p>
+      <p><strong>Doors Open:</strong> 6:00 PM</p>
+    </div>
+  </section>
+
+  <section id="tickets">
+    <h2>🎟 Limited Tickets Available</h2>
+    <p>Don’t miss your chance to witness history in the making.</p>
+    <br>
+<a href="https://www.district.in/events/ye-live-in-india-2026-buy-tickets" target="_blank" class="cta-button">
+  BOOK NOW
+</a>
+  </section>
+
+  <footer>
+    © 2026 Kanye West Live in Delhi | All Rights Reserved
+  </footer>
+ 
+ <script>
+  const concertDate = new Date("March 29, 2026 20:00:00").getTime();
+
+  const timer = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = concertDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+      days + "d : " + hours + "h : " + minutes + "m : " + seconds + "s";
+
+    if (distance < 0) {
+      clearInterval(timer);
+      document.getElementById("countdown").innerHTML = "🎤🔥 Concert Started!";
+    }
+  }, 1000);
+</script>
+</body>
+</html>
